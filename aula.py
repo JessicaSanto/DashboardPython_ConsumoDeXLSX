@@ -1,15 +1,20 @@
-# Run this app with `python app.py` and
-# visit http://127.0.0.1:8050/ in your web browser.
+# pip install dash
+# pip install pandas
+# pip install openpyxl
 
+# **************** DASHBOARD COM DASH E PLOTLY ********************
 
 from dash import Dash, html, dcc, Output, Input
+# Importação do dashboard, estrutura do html e estruturação dcc (dash core components -> componentes do dashboard)
+
 import plotly.express as px
 import pandas as pd
 
 app = Dash(__name__)
+# Ao construir um Dashboard, temos duas grandes estruturas: Layout e Callbacks
+# Layout -> Tudo aquilo que você vai visualizar
+# CallBacks -> Todas as funcionalidades que você vai  dar para o dash
 
-# assume you have a "long-form" data frame
-# see https://plotly.com/python/px-arguments/ for more options
 df = pd.read_excel("Vendas.xlsx")
 #  Esta linha lê o arquivo Excel chamado "Vendas.xlsx" e armazena os dados em um DataFrame do pandas chamado df.
 
